@@ -1,0 +1,51 @@
+{
+  "name": "com.unity.xr.interaction.toolkit",
+  "displayName": "XR Interaction Toolkit",
+  "version": "2.1.0-pre.1",
+  "unity": "2019.4",
+  "description": "A high-level, component-based, interaction system for creating VR and AR experiences. It provides a framework that makes 3D and UI interactions available from Unity input events. The core of this system is a set of base Interactor and Interactable components, and an Interaction Manager that ties these two types of components together. It also contains components that you can use for locomotion and drawing visuals.",
+  "keywords": [
+    "XR",
+    "VR",
+    "toolkit",
+    "interaction"
+  ],
+  "category": "XR",
+  "dependencies": {
+    "com.unity.inputsystem": "1.3.0",
+    "com.unity.ugui": "1.0.0",
+    "com.unity.xr.core-utils": "2.0.0",
+    "com.unity.xr.legacyinputhelpers": "2.1.8",
+    "com.unity.modules.audio": "1.0.0",
+    "com.unity.modules.imgui": "1.0.0",
+    "com.unity.modules.physics": "1.0.0"
+  },
+  "samples": [
+    {
+      "displayName": "Starter Assets",
+      "description": "Assets to streamline setup of behaviors, including a default set of input actions and presets for use with XR Interaction Toolkit behaviors that use the Input System.",
+      "path": "Samples~/Starter Assets"
+    },
+    {
+      "displayName": "XR Device Simulator",
+      "description": "Assets related to the simulation of XR HMD and controllers.",
+      "path": "Samples~/XR Device Simulator"
+    },
+    {
+      "displayName": "Tunneling Vignette",
+      "description": "Assets to let users set up and configure tunneling vignette effects as a comfort mode option.",
+      "path": "Samples~/Tunneling Vignette"
+    }
+  ],
+  "_upm": {
+    "changelog": "### Added\r\n- Added properties to XR Grab Interactable to use dynamic attach transforms so the grab pose will be based on the pose of the Interactor when the selection is made. You can enable the Use Dynamic Attach property to keep the object in the same position and rotation when grabbed. ([1373337](https://issuetracker.unity3d.com/product/unity/issues/guid/1373337))\r\n- Added filtering for interactions to help determine the intent of the user. The new abstractions XR Target Filter and XR Target Evaluator let users configure and extend the logic of how an Interactor ranks an Interactable from a list of valid ones, specifically in the `GetValidTargets` method. Several different evaluators are included in this update, and custom ones can be created. This makes it easier to customize the Interactor without needing to create a derived behavior.\r\n- Added the `XRBaseInteractable.distanceCalculationMode` property. This give users the ability to configure how an Interactable calculates its distance to a location, such as to an Interactor for sorting its valid targets, at varying tradeoffs between accuracy and performance.\r\n- Added the `XRBaseInteractable.getDistanceOverride` property that lets users assign a method to be called when the Interactable is performing a distance calculation to a location, which is used when the Interactor is ordering its valid targets. This property makes it easier to customize the Interactable without needing to create a derived behavior.\r\n- Added `IsOverUIGameObject` function to `XRRayInteractor` that does a simple check to see if the ray cast result is hitting a UI GameObject.\r\n- Added `InputActionReference` properties to the `XRUIInputModule` for left/right/middle clicks, navigation move, submit, cancel, scroll and pointer movement actions. This allows for greater flexibility and customization of what devices can drive UI input when using the `XRUIInputModule`.\r\n- The `XRI Default Input Actions` asset in the `Starter Assets` sample package now includes an `XRI UI` Action Map for UI-specific Input Actions. Also included is a Preset asset to quickly map the actions onto the `XRUIInputModule` component.\r\n- Added a Tunneling Vignette sample. It contains assets to let users set up and configure the tunneling vignette as a comfort mode intended to mitigate motion sickness in VR.\r\n- Added a Tunneling Vignette Controller component used for driving the vignette material included with the Tunneling Vignette sample. Locomotion Provider components can be drag-and-dropped into a list of Locomotion Providers that will trigger the tunneling vignette effect. A custom inspector allows previewing each effect for the corresponding Locomotion Provider.\r\n  * Added `ITunnelingVignetteProvider` interface to allow custom behaviors to control the vignette effect.\r\n  * Added a `LocomotionPhase` enum in `LocomotionProvider` that can be used to describe different phases of a locomotion for use with the tunneling vignette. Added code in `ContinuousMoveProviderBase`, `ContinuousTurnProviderBase`, `SnapTurnProviderBase`, and `TeleportationProvider` to compute their `LocomotionPhase`.\r\n  * Added a Delay Time property to the Teleportation Provider and Snap Turn Provider components to support customization of timing for use with fading in the tunneling vignette.\r\n\r\n### Changed\r\n- Updated code paths with macro protections around `InputSystem` or `Input Manager` based code to prevent attempted usage when either one is not active.\r\n- Scroll speed when using the ScrollWheel Input System Action is now being divided by 20 pixels per line instead of 120 pixels per line to match the `InputSystemUIInputModule` scrolling speed.\r\n- Changed `XRSocketInteractor` hover mesh pose calculation to only ignore the current pose of the attach transform for `XRGrabInteractable` when Use Dynamic Attach is disabled instead of for all types of `IXRSelectInteractable`.\r\n- Changed `XRControllerRecorder.recording` from `internal` to `public`.\r\n\r\n### Fixed\r\n- Fixed `UIInputModule` so pointer clicks set the correct button (left/right/middle) for the `EventSystem` in the `PointerEventData`.\r\n- Fixed compilation errors on platforms such as Game Core where `ENABLE_VR` is not currently defined."
+  },
+  "upmCi": {
+    "footprint": "3f6c44352a5734705c0526140d753c59b4d6c109"
+  },
+  "repository": {
+    "url": "https://github.com/Unity-Technologies/com.unity.xr.interaction.toolkit.git",
+    "type": "git",
+    "revision": "7832ad06a69eefa88578bb8b208b0277bd875d33"
+  }
+}

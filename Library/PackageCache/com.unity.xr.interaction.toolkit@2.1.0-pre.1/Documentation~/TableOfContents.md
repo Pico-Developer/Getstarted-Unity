@@ -1,0 +1,16 @@
+* [XR Interaction Toolkit](index.md)
+* Guides
+  * [Installation](installation.md)
+  * [Architecture](architecture.md)
+  * [General setup](general-setup.md)
+  * [UI setup](ui-setup.md)
+  * [Locomotion](locomotion.md)
+  * [Interaction layers](interaction-layers.md)
+  * [Target filters](target-filters.md)
+  * [AR interaction](ar-interaction.md)
+  * [Debugger window](debugger-window.md)
+* Reference
+  * [Glossary](glossary.md)
+  * [Components](components.md)
+  * [Samples](samples.md)
+  * [Extending XR Interaction Toolkit](extending-xri.md)
