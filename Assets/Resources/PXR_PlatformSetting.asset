@@ -15,4 +15,5 @@ MonoBehaviour:
   entitlementCheckSimulation: 0
   startTimeEntitlementCheck: 0
   appID: 
+  useHighlight: 1
   deviceSN: []

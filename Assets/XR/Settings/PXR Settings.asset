@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c52faa1787e89a4eaf8abdae2e6ae25, type: 3}
   m_Name: PXR Settings
   m_EditorClassIdentifier: 
-  stereoRenderingModeAndroid: 0
+  stereoRenderingModeAndroid: 1
   systemDisplayFrequency: 0
+  optimizeBufferDiscards: 0
+  enableAppSpaceWarp: 0
+  systemSplashScreen: {fileID: 0}

@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GetStarted.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Developer scene/indoor/scene/indoor_001.unity
+    guid: e0af4eafd224cc84fb8c0c025fd2fba7
+  - enabled: 1
+    path: Assets/Developer scene/outdoor/outdoor_001.unity
+    guid: 6f300e23ae813d04b9383547ff2f0e6f
   m_configObjects:
-    Unity.XR.PXR.Settings: {fileID: 11400000, guid: 27dd6118e82996b49a061e630523a776, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 543c3ed2f21fe1f419a733edf415cf95, type: 2}
+    Unity.XR.PXR.Settings: {fileID: 11400000, guid: 3f6e3e6351f3a774b89b4397da38b335, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8d9770a3f21348640af813230aa0888e, type: 2}
