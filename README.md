@@ -1,13 +1,17 @@
-# Get Started - Unity
-The **Get Started** sample sets you up to create a basic scene using the Pico Unity Integration SDK and the Unity XR Interaction Toolkit. The sample includes the use of SDK features, the basic configurations, and a scene containing the HMD and controller settings. For instructions on how to build the scene, refer to the [Quickstart Guide](https://developer.pico-interactive.com/document/unity).
+The GetStartedDemo includes the indoor and outdoor scenes. You can experience the following in the demo: changing your view, locomotion, teleportation, and switching between the indoor and outdoor scenes.
 
-**Development Environment**
+## Development environment
+- SDK version: 2.3.0
+- PICO device's system version: 5.7.0
+- Unity version: 2020.3.48
+- Graphics API: OpenGLES3
+- App structure: 64-bit
 
-| Name  | Version    |
-| ----  |  ----      |
-| Unity Editor | 2020.3.35f |
-| Pico Unity Integration SDK | 2.0.5 |
-| XR Interaction Toolkit | 2.1.0 |
+## Use the demo
+- Change your view: Push the thumbsticks on the controllers to the left and right.
+- Continuous locomotion: Push the thumbsticks on the controllers up and down.
+- Teleportation: Aim at the target place and press the Grip button on the left controller.
+Switch between scenes: Press the Y button on the left controller.
 
-## Licenses
-This project is released under the [MIT License](https://github.com/Pico-Developer/Getstarted-Unity/blob/main/License).
+## Learn more
+For more information about the demo, refer to [this article](https://developer-global.pico-interactive.com/en/document/unity/get-started-demo/).
